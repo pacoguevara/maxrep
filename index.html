@@ -5,87 +5,94 @@
     <title>Max Rep</title>
     <script src="main.js" charset="utf-8"></script>
     <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="no title">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="style.css" media="screen" title="no title">
   </head>
   <body>
-    <div class="controls">
-      <input type="text" name="repmax" id="pr" placeholder="Enter your PR">
-      <button type="button" name="calculate" id="calculate">Calculate</button>
-    </div>
-    <div class="table-container">
-      <table>
-        <thead>
-          <tr>
-            <th>Percentage</th>
-            <th>Bottom Suggestion</th>
-            <th>Exactly</th>
-            <th>Top Suggestion</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>95%</th>
-            <th id="bottom95"></th>
-            <th id="exactly95"></th>
-            <th id="top95"></th>
-          </tr>
-          <tr>
-            <th>90%</th>
-            <th id="bottom90"></th>
-            <th id="exactly90"></th>
-            <th id="top90"></th>
-          </tr>
-          <tr>
-            <th>85%</th>
-            <th id="bottom85"></th>
-            <th id="exactly85"></th>
-            <th id="top85"></th>
-          </tr>
-          <tr>
-            <th>80%</th>
-            <th id="bottom80"></th>
-            <th id="exactly80"></th>
-            <th id="top80"></th>
-          </tr>
-          <tr>
-            <th>75%</th>
-            <th id="bottom75"></th>
-            <th id="exactly75"></th>
-            <th id="top75"></th>
-          </tr>
-          <tr>
-            <th>70%</th>
-            <th id="bottom70"></th>
-            <th id="exactly70"></th>
-            <th id="top70"></th>
-          </tr>
-          <tr>
-            <th>65%</th>
-            <th id="bottom65"></th>
-            <th id="exactly65"></th>
-            <th id="top65"></th>
-          </tr>
-          <tr>
-            <th>60%</th>
-            <th id="bottom60"></th>
-            <th id="exactly60"></th>
-            <th id="top60"></th>
-          </tr>
-          <tr>
-            <th>55%</th>
-            <th id="bottom55"></th>
-            <th id="exactly55"></th>
-            <th id="top55"></th>
-          </tr>
-          <tr>
-            <th>50%</th>
-            <th id="bottom50"></th>
-            <th id="exactly50"></th>
-            <th id="top50"></th>
-          </tr>
-        </tbody>
-      </table>
+    <div class="container">
+      <div class="controls row">
+        <div class="form-inline col-md-4 col-md-offset-4">
+          <div class="form-group">
+            <input type="text" class="form-control" name="repmax" id="pr" placeholder="Enter your PR">
+            <button type="button" class="btn btn-info form-control" name="calculate" id="calculate">Calculate</button>
+          </div>
+        </div>
+      </div>
+      <div class="table-container row">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Percentage</th>
+              <th>Bottom Suggestion</th>
+              <th>Exactly</th>
+              <th>Top Suggestion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>95%</th>
+              <th id="bottom95"></th>
+              <th id="exactly95"></th>
+              <th id="top95"></th>
+            </tr>
+            <tr>
+              <th>90%</th>
+              <th id="bottom90"></th>
+              <th id="exactly90"></th>
+              <th id="top90"></th>
+            </tr>
+            <tr>
+              <th>85%</th>
+              <th id="bottom85"></th>
+              <th id="exactly85"></th>
+              <th id="top85"></th>
+            </tr>
+            <tr>
+              <th>80%</th>
+              <th id="bottom80"></th>
+              <th id="exactly80"></th>
+              <th id="top80"></th>
+            </tr>
+            <tr>
+              <th>75%</th>
+              <th id="bottom75"></th>
+              <th id="exactly75"></th>
+              <th id="top75"></th>
+            </tr>
+            <tr>
+              <th>70%</th>
+              <th id="bottom70"></th>
+              <th id="exactly70"></th>
+              <th id="top70"></th>
+            </tr>
+            <tr>
+              <th>65%</th>
+              <th id="bottom65"></th>
+              <th id="exactly65"></th>
+              <th id="top65"></th>
+            </tr>
+            <tr>
+              <th>60%</th>
+              <th id="bottom60"></th>
+              <th id="exactly60"></th>
+              <th id="top60"></th>
+            </tr>
+            <tr>
+              <th>55%</th>
+              <th id="bottom55"></th>
+              <th id="exactly55"></th>
+              <th id="top55"></th>
+            </tr>
+            <tr>
+              <th>50%</th>
+              <th id="bottom50"></th>
+              <th id="exactly50"></th>
+              <th id="top50"></th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </body>
   <script type="text/javascript">
