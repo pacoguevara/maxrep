@@ -7,8 +7,84 @@
     <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
   </head>
   <body>
-    <input type="text" name="repmax" id="pr" placeholder="Enter your PR">
-    <button type="button" name="calculate" id="calculate">Calculate</button>
+    <div class="controls">
+      <input type="text" name="repmax" id="pr" placeholder="Enter your PR">
+      <button type="button" name="calculate" id="calculate">Calculate</button>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Percentage</th>
+            <th>Bottom Suggestion</th>
+            <th>Exactly</th>
+            <th>Top Suggestion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>95%</th>
+            <th id="bottom95"></th>
+            <th id="exactly95"></th>
+            <th id="top95"></th>
+          </tr>
+          <tr>
+            <th>90%</th>
+            <th id="bottom90"></th>
+            <th id="exactly90"></th>
+            <th id="top90"></th>
+          </tr>
+          <tr>
+            <th>85%</th>
+            <th id="bottom85"></th>
+            <th id="exactly85"></th>
+            <th id="top85"></th>
+          </tr>
+          <tr>
+            <th>80%</th>
+            <th id="bottom80"></th>
+            <th id="exactly80"></th>
+            <th id="top80"></th>
+          </tr>
+          <tr>
+            <th>75%</th>
+            <th id="bottom75"></th>
+            <th id="exactly75"></th>
+            <th id="top75"></th>
+          </tr>
+          <tr>
+            <th>70%</th>
+            <th id="bottom70"></th>
+            <th id="exactly70"></th>
+            <th id="top70"></th>
+          </tr>
+          <tr>
+            <th>65%</th>
+            <th id="bottom65"></th>
+            <th id="exactly65"></th>
+            <th id="top65"></th>
+          </tr>
+          <tr>
+            <th>60%</th>
+            <th id="bottom60"></th>
+            <th id="exactly60"></th>
+            <th id="top60"></th>
+          </tr>
+          <tr>
+            <th>55%</th>
+            <th id="bottom55"></th>
+            <th id="exactly55"></th>
+            <th id="top55"></th>
+          </tr>
+          <tr>
+            <th>50%</th>
+            <th id="bottom50"></th>
+            <th id="exactly50"></th>
+            <th id="top50"></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </body>
   <script type="text/javascript">
     Calcs.init();
