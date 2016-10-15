@@ -5,21 +5,21 @@
     <title>Max Rep</title>
     <script src="main.js" charset="utf-8"></script>
     <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <link rel="stylesheet" href="style.css" media="screen" title="no title">
   </head>
   <body>
     <div class="container">
       <div class="controls row">
-        <div class="form-inline col-md-4 col-md-offset-4">
-          <div class="form-group">
-            <input type="text" class="form-control" name="repmax" id="pr" placeholder="Enter your PR">
-            <button type="button" class="btn btn-info form-control" name="calculate" id="calculate">Calculate</button>
-          </div>
+        <div class="col m4 offset-m3">
+          <input type="text" class="" name="repmax" id="pr" placeholder="Enter your PR">
+        </div>
+        <div class="col m2">
+          <button type="button" class="waves-effect waves-light btn" name="calculate" id="calculate">Calculate</button>
         </div>
       </div>
-      <div class="table-container row">
+      <div class="row">
         <table class="table">
           <thead>
             <tr>
@@ -94,10 +94,10 @@
         </table>
       </div>
     </div>
-    <footer>
-      <div class="row">
-        <div class="col-md-3 col-md-offset-5">
-          <p>Created by <a href="https://www.twitter.com/pacooguevara">@pacooguevara</a></p>
+    <footer class="">
+      <div class="footer-copyright">
+        <div class="container">
+        © 2016 Developed by <a href="https://www.twitter.com/pacooguevara">@pacooguevara</a>
         </div>
       </div>
     </footer>
