@@ -18,10 +18,29 @@ var Calcs = (function () {
 			$("#exactly"+i).html(percentage);
 	    $("#top"+i).html(topSuggestion);
 		}
-
   }
 
+	var calcPlates = function(weight){
+		var plates = [45, 35, 25, 15, 10, 5, 2.5]
+		var bars = [45, 35, 15]
+		var result = {}
+		for (var i = 0; i < bars.length; i++) {
+			var bar = bars[i];
+			var remianing = weight-bar;
+			result[bar] = new Object;
+			for (var j = 0; j < plates.length; j++) {
+				var plate = plates[j];
+				if(remianing - plate*2 >= 0){
+					result[bar][plate] = 2;
+					remianing = remianing-plate*2
+				}
+			}
+		}
+		return result;
+	}
+
 	return {
-    init: init
+    init: init,
+		calcPlates: calcPlates
   };
 }());
