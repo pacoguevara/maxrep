@@ -14,9 +14,18 @@ var Calcs = (function () {
 			var percentage = (pr*(i/100));
 	    var bottomSuggestion = percentage - percentage%5;
 	    var topSuggestion = bottomSuggestion+5;
+			var percentagePlates = calcPlates(percentage.toFixed(2));
+			var bottomPlates = calcPlates(bottomSuggestion);
+			var topPlates = calcPlates(topSuggestion);
+			var percPlatesMsg = platesSuggestion(percentagePlates);
+			var bottomPlatesMsg = platesSuggestion(bottomPlates);
+			var topPlatesMsg = platesSuggestion(topPlates);
 			$("#bottom"+i).html(bottomSuggestion);
-			$("#exactly"+i).html(percentage);
+			$("#exactly"+i).html(percentage.toFixed(2));
 	    $("#top"+i).html(topSuggestion);
+			$("#bottomPlates"+i).html(percPlatesMsg);
+			$("#exactlyPlates"+i).html(percPlatesMsg);
+	    $("#topPlates"+i).html(topPlatesMsg);
 		}
   }
 
@@ -42,18 +51,16 @@ var Calcs = (function () {
 	var platesSuggestion = function(result){
 		var msg = "";
 		for (var key in result) {
-			msg += "Barra de "+key+" (Discos: "
+			msg += key+"lb bar ("
 			for(var keyPlate in result[key]){
 				msg += result[key][keyPlate]+"x"+keyPlate+"lb "
 			}
-			msg += ") \n"
+			msg += ")<br>"
    }
 	 return msg
 	}
 
 	return {
-    init: init,
-		calcPlates: calcPlates,
-		platesSuggestion: platesSuggestion
+    init: init
   };
 }());
