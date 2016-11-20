@@ -39,8 +39,21 @@ var Calcs = (function () {
 		return result;
 	}
 
+	var platesSuggestion = function(result){
+		var msg = "";
+		for (var key in result) {
+			msg += "Barra de "+key+" (Discos: "
+			for(var keyPlate in result[key]){
+				msg += result[key][keyPlate]+"x"+keyPlate+"lb "
+			}
+			msg += ") \n"
+   }
+	 return msg
+	}
+
 	return {
     init: init,
-		calcPlates: calcPlates
+		calcPlates: calcPlates,
+		platesSuggestion: platesSuggestion
   };
 }());
