@@ -39,12 +39,23 @@ var Calcs = (function () {
 			result[bar] = new Object;
 			for (var j = 0; j < plates.length; j++) {
 				var plate = plates[j];
-				if(remianing - plate*2 >= 0){
-					result[bar][plate] = 2;
+				result[bar][plate] = 0;
+				while(remianing - plate*2 >= 0){
+					result[bar][plate] += 2;
 					remianing = remianing-plate*2
 				}
 			}
 		}
+		return cleanResult(result);
+	}
+
+	var cleanResult = function(result){
+		_.each(result, function(node){
+			_.each(node, function(plate, idx){
+				if(plate == 0)
+					delete node[idx];
+			})
+		});
 		return result;
 	}
 
